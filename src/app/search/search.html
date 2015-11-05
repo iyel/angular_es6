@@ -1,0 +1,26 @@
+<div class="gh-search well">
+    <form role="form">
+        <div class="form-group has-feedback">
+            <label class="control-label">Search: </label>
+            <input type="text" class="form-control" placeholder="Search"
+                   ng-model="searchCtrl.query"
+                   ng-model-options="{ debounce: { 'default': 500, 'blur': 0 } }"
+                   ng-change="searchCtrl.searchRepos()"/>
+            <i class="form-control-feedback fa fa-search"></i>
+        </div>
+    </form>
+
+    <ol>
+        <li ng-repeat="repo in searchCtrl.repos">
+            <span ng-bind="repo.full_name"></span>
+
+            <div>
+                <small ng-bind="repo.description"></small>
+            </div>
+        </li>
+    </ol>
+
+    <span ng-if="searchCtrl.repos.length === 0">
+        <em>No results found...</em>
+    </span>
+</div>
