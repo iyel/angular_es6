@@ -10,4 +10,4 @@ import './search.resource';
 
 angular.module('gh.search', ['gh.api.search'])
     .controller('SearchController', SearchController)
-    .directive('ghSearch', SearchDirective.directiveFactory);
+    .directive('ghSearch', SearchDirective);

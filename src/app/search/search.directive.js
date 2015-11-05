@@ -20,4 +20,4 @@ class SearchDirective {
     }
 }
 
-export default SearchDirective;
+export default SearchDirective.directiveFactory;
