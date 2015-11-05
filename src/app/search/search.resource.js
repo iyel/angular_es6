@@ -12,7 +12,7 @@ class SearchModel {
         var apiUrl = 'https://api.github.com' + '/search';
 
         return _$resource.get(this)(apiUrl, null, {
-            'getRepositories': {
+            'getRepos': {
                 method: 'GET',
                 url: apiUrl + '/repositories',
                 params: {q: '@q'}

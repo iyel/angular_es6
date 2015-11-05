@@ -13,7 +13,7 @@ class SearchController {
 
     searchRepos() {
         if (this.query) {
-            this.Search.getRepositories({q: this.query}, (data) => {
+            this.Search.getRepos({q: this.query}, (data) => {
                 this.repos = data.items;
             });
         }
