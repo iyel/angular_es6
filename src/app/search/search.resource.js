@@ -4,20 +4,17 @@
 
 'use strict';
 
-var _$resource = new WeakMap();
-
 class SearchModel {
     constructor($resource) {
-        _$resource.set(this, $resource);
         var apiUrl = 'https://api.github.com' + '/search';
 
-        return _$resource.get(this)(apiUrl, null, {
+        return $resource(apiUrl, null, {
             'getRepos': {
                 method: 'GET',
-                url: apiUrl + '/repositories',
+                url: `${apiUrl}/repositories`,
                 params: {q: '@q'}
             }
-        })//`${apiUrl}/repo`
+        })
     }
 
     static factory($resource) {
