@@ -1,8 +1,8 @@
 # angular_es6
-my first test application of Angular 1.x and ES6
+test application of Angular 1.x and ES6
 
-npm dev
+gulp dev
 
-npm release
+gulp release
 
-npm test
+gulp test
